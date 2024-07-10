@@ -1,15 +1,9 @@
-package Test;
+package test;
 
-import Drivers.HeadDriver;
-import Pages.BasePage;
-import Providers.DataProviders;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import drivers.HeadDriver;
+import providers.DataProviders;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
-import java.util.concurrent.TimeUnit;
 
 public abstract class BaseTest{
 

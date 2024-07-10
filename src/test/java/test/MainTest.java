@@ -1,26 +1,21 @@
-package Test;
+package test;
 
-import Drivers.HeadDriver;
-import Helpers.StringHelper;
-import Pages.MainPage;
-import Pages.NamePage;
-import org.openqa.selenium.WebDriver;
+import helpers.StringHelper;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import pages.MainPage;
 
-import static Helpers.StringModifier.getUniqueString;
+
+import org.testng.annotations.Test;
+import pages.Users;
+
 
 public class MainTest extends BaseTest {
 
 
     @Test
     public void test() {
-        String title = getUniqueString(StringHelper.HELP_TITLE);
-        NamePage users = new MainPage().clickCommunity()
-                .findTitle(title)
-                .findUser();
-
-        Assert.assertEquals(users.getUsername(), StringHelper.HELP_TITLE);
-
+        Users users = new MainPage().clickCommunity()
+                .findTitle(StringHelper.HELP_TITLE);
+        Assert.assertEquals(users.getCountOfUsers(StringHelper.HELP_TITLE), StringHelper.HELP_TITLE);
     }
 }

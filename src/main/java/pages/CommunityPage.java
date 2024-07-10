@@ -1,6 +1,6 @@
 package pages;
 
-import io.qameta.allure.Step;
+
 import org.openqa.selenium.By;
 
 public class CommunityPage extends BasePage {
@@ -12,7 +12,7 @@ public class CommunityPage extends BasePage {
         waitVisibilityOfElement(loop);
     }
 
-    @Step
+
     public Users findTitle(String str) {
         waitVisibilityOfElement(searchButton).click();
         waitVisibilityOfElement(searchButton).sendKeys(str);
