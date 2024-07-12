@@ -6,9 +6,10 @@ public class MainPage extends BasePage {
     By element = By.xpath("//div[@class='responsive_page_content']//a[@data-tooltip-content='.submenu_Community']");
 
     public MainPage() {
-
+        // todo лишняя строка
         waitVisibilityOfElement(element);
     }
+    // todo нужна пустая строка между методами \ конструктором и методом. Добавь плиз.
     public CommunityPage clickCommunity() {
         waitVisibilityOfElement(element).click();
         return new CommunityPage();
