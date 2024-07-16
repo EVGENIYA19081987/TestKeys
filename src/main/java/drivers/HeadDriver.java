@@ -16,12 +16,9 @@ public class HeadDriver {
         }
         return driver;
     }
-    // todo лишняя строка
-
     public static void createDriver() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        // todo лишняя строка
     }
 
     public static void closeDriver() {
@@ -37,6 +34,4 @@ public class HeadDriver {
     public static void setWindowSize() {
         getDriver().manage().window().maximize();
     }
-    // todo лишняя строка
-    // todo лишняя строка
 }
