@@ -11,7 +11,8 @@ public class MainTest extends BaseTest {
     @Test
     public void test() {
         Users users = new MainPage().clickCommunity()
-                .findTitle(StringHelper.HELP_TITLE).ClickLoop();
+                .findTitle(StringHelper.HELP_TITLE)
+                .ClickLoop();
         Assert.assertTrue(users.getCountOfUsers(StringHelper.HELP_TITLE));
     }
 }
