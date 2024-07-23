@@ -4,11 +4,11 @@ import org.openqa.selenium.By;
 
 import static drivers.HeadDriver.getDriver;
 
-public class UserList extends BasePage {
+public class UserListPage extends BasePage {
     By nameUser = By.xpath("//a[text()='Black8']");
     String userNameTemplate = "//a[text()='%s']";
 
-    public UserList() {
+    public UserListPage() {
         waitVisibilityOfElement(By.xpath("//div[@class='maincontent']"));
     }
 
