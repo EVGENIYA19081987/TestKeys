@@ -9,7 +9,7 @@ public class CommunityPage2 extends BasePage {
         waitVisibilityOfElement(loop);
     }
 
-    public Users ClickLoop() {
+    public Users clickLoop() {
         waitVisibilityOfElement(loop).click();
         return new Users();
     }
