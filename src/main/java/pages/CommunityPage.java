@@ -4,15 +4,20 @@ import org.openqa.selenium.By;
 
 public class CommunityPage extends BasePage {
     By searchButton = By.xpath("//input[@id='SearchPlayers']");
+    By loop = By.xpath("//input[@class='community_home_search_players_image']");
 
     public CommunityPage() {
         waitVisibilityOfElement(searchButton);
     }
 
-    public CommunityPage2 findTitle(String str) {
+    public CommunityPage findTitle(String str) {
         waitVisibilityOfElement(searchButton).click();
         waitVisibilityOfElement(searchButton).sendKeys(str);
-        return new CommunityPage2();
+        return this;
     }
 
+    public Users clickLoop() {
+        waitVisibilityOfElement(loop).click();
+        return new Users();
+    }
 }
