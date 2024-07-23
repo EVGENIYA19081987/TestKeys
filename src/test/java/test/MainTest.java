@@ -2,7 +2,7 @@ package test;
 
 import helpers.StringHelper;
 import org.testng.annotations.Test;
-import pages.LastPage;
+import pages.UserList;
 import pages.MainPage;
 
 import static org.testng.AssertJUnit.assertTrue;
@@ -10,7 +10,7 @@ import static org.testng.AssertJUnit.assertTrue;
 public class MainTest extends BaseTest {
     @Test
     public void test() {
-        LastPage users = new MainPage()
+        UserList users = new MainPage()
                 .clickCommunity()
                 .setTitle(StringHelper.HELP_TITLE)
                 .clickLoop();

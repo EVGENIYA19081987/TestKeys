@@ -16,8 +16,8 @@ public class CommunityPage extends BasePage {
         return this;
     }
 
-    public LastPage clickLoop() {
+    public UserList clickLoop() {
         waitVisibilityOfElement(loop).click();
-        return new LastPage();
+        return new UserList();
     }
 }
