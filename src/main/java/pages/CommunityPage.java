@@ -10,14 +10,14 @@ public class CommunityPage extends BasePage {
         waitVisibilityOfElement(searchButton);
     }
 
-    public CommunityPage findTitle(String str) {
+    public CommunityPage setTitle(String str) {
         waitVisibilityOfElement(searchButton).click();
         waitVisibilityOfElement(searchButton).sendKeys(str);
         return this;
     }
 
-    public Users clickLoop() {
+    public LastPage clickLoop() {
         waitVisibilityOfElement(loop).click();
-        return new Users();
+        return new LastPage();
     }
 }

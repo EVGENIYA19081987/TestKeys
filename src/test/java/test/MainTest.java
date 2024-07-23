@@ -1,26 +1,22 @@
 package test;
 
 import helpers.StringHelper;
-import org.testng.Assert;
+import org.testng.annotations.Test;
 import pages.LastPage;
 import pages.MainPage;
 
-
-import org.testng.annotations.Test;
-import pages.NamePage;
-import pages.Users;
+import static org.testng.AssertJUnit.assertTrue;
 
 public class MainTest extends BaseTest {
     @Test
     public void test() {
-        LastPage users = new MainPage().
-                clickCommunity()
-                .findTitle(StringHelper.HELP_TITLE)
-                .clickLoop()
-                .getNames()
-                .findUser();
+        LastPage users = new MainPage()
+                .clickCommunity()
+                .setTitle(StringHelper.HELP_TITLE)
+                .clickLoop();
 
-        Assert.assertTrue(users.isDisplayed());
+        assertTrue(users.isDisplayed());
+        assertTrue(users.getCountOfUsers(StringHelper.HELP_TITLE));
 
     }
 }
